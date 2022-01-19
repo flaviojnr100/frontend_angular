@@ -1,0 +1,31 @@
+<p>
+    <mat-toolbar>
+      <span>Sistema</span>
+    </mat-toolbar>
+</p>
+
+<div class="login card">
+  
+  <div class="card-body">
+    <h1 class="card-title">Entrar</h1>
+    <form method="post" (ngSubmit)='logar()' [formGroup]="formulario">
+      <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName='email'>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" formControlName='senha'>
+      </mat-form-field>
+      <div *ngIf="isMensagem" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{titleMensagem}} </strong>{{contentMensagem}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+      <button mat-flat-button color="primary" type="submit" [disabled]="formulario.invalid">Entrar</button>
+    </form>
+  </div>
+  
+  
+</div>

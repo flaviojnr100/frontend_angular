@@ -1,0 +1,20 @@
+.menu_botoes{
+    margin-left: 30%;
+}
+.botoes{
+    margin-left: 10px;
+    border-bottom: 4px solid transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+}
+.botoes:hover{
+    cursor: pointer;
+}
+.botoes:focus{
+    border-bottom: 4px solid black;
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px
+}

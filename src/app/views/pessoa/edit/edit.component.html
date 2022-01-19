@@ -1,0 +1,40 @@
+<mat-label><h2>Editar</h2></mat-label>
+<mat-dialog-content>
+    <form method="post" (ngSubmit)="editar()" [formGroup]="formulario">
+       <mat-form-field appearance="fill">
+           <mat-label>Nome</mat-label>
+           <input matInput formControlName="nome" class="campos">
+       </mat-form-field>    
+        <mat-form-field appearance="fill">
+            <mat-label>Sobrenome</mat-label>
+            <input matInput formControlName="sobrenome" class="campos">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" class="campos">
+            
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input matInput type="password" formControlName="senha" class="campos">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Confirme a senha</mat-label>
+            <input matInput type="password" formControlName="senhaAgain" class="campos">
+        </mat-form-field>
+        
+        <div *ngIf="isMensagem" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{titleMensagem}} </strong>{{contentMensagem}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        
+            <button mat-raised-button color="primary" type="submit" [disabled]="formulario.invalid">Finalizar</button>
+            <button mat-button type="button"  (click)="onNoClick()">Cancelar</button>
+        
+        
+    </form>
+</mat-dialog-content>
+
+

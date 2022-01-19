@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <mat-toolbar-row style="font-size: 1.5rem; height: 80px;">
+        <span [routerLink]="''" style="cursor: pointer;">Sistema</span>
+        <span class="example-spacer"></span>
+        <div class="menu_botoes">
+            <button  class="botoes" (click)="home()">Inicio</button>
+            <button  class="botoes" (click)="pessoa()">Pessoa</button>
+            <button  class="botoes" (click)="logout()">Logout</button>
+        </div>
+        
+      </mat-toolbar-row>
+       
+</mat-toolbar>
+<app-dashboard *ngIf="rota=='home'"></app-dashboard>
+<app-pessoa *ngIf="rota=='pessoa'"></app-pessoa>

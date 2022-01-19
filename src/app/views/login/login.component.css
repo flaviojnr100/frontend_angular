@@ -1,0 +1,19 @@
+
+.login{
+    width: 20%;
+    height: 40%;
+    margin-left: 35%;
+    margin-top: 12%;
+    background-color: white;
+
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
